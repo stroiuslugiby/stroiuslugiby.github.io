@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты Stroiuslugi - свяжитесь с нами для консультации и заказа услуг. Телефон, email, адрес, форма обратной связи.">
+    <meta name="keywords" content="контакты, связаться, телефон, адрес">
+    <meta property="og:title" content="Контакты - Stroiuslugi">
+    <meta property="og:description" content="Свяжитесь с нами для консультации и заказа услуг.">
+    <title>Контакты - Stroiuslugi | Связаться с нами</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-hammer"></i> Stroiuslugi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Услуги
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services/painting.html">Малярные работы</a></li>
+                            <li><a class="dropdown-item" href="services/rough_finish.html">Черновая отделка</a></li>
+                            <li><a class="dropdown-item" href="services/flooring.html">Финишные покрытия</a></li>
+                            <li><a class="dropdown-item" href="services/tiling.html">Укладка плитки</a></li>
+                            <li><a class="dropdown-item" href="services/construction.html">Строительные работы</a></li>
+                            <li><a class="dropdown-item" href="services/facade.html">Фасадные работы</a></li>
+                            <li><a class="dropdown-item" href="services/paving.html">Тротуарная плитка</a></li>
+                            <li><a class="dropdown-item" href="services/concrete.html">Бетонные работы</a></li>
+                            <li><a class="dropdown-item" href="services/roofing.html">Кровельные работы</a></li>
+                            <li><a class="dropdown-item" href="services/electricity_plumbing.html">Электрика и сантехника</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Контакты</h1>
+            <p class="lead">Свяжитесь с нами для консультации и заказа услуг</p>
+        </div>
+    </section>
+
+    <!-- Контакты и форма -->
+    <section class="service-description">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2>Наши контакты</h2>
+                    <div class="contact-info">
+                        <p><i class="bi bi-telephone"></i> <strong>Телефон:</strong> <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                        <p><i class="bi bi-envelope"></i> <strong>Email:</strong> <a href="mailto:info@stroiuslugi.by">info@stroiuslugi.by</a></p>
+                        <p><i class="bi bi-geo-alt"></i> <strong>Адрес:</strong> г. Минск, ул. Строительная, д. 1</p>
+                        <!-- TODO: Обновить реальный адрес в Минске -->
+                        <p><i class="bi bi-clock"></i> <strong>Режим работы:</strong> Пн-Пт: 9:00 - 18:00, Сб: 10:00 - 16:00</p>
+                        <!-- TODO: Обновить реальные контакты -->
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <h2>Форма обратной связи</h2>
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Ваше имя *</label>
+                            <input type="text" class="form-control" id="contactName" name="name" required>
+                            <div class="invalid-feedback">Пожалуйста, введите ваше имя.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactPhone" class="form-label">Телефон *</label>
+                            <input type="tel" class="form-control" id="contactPhone" name="phone" required pattern="[0-9+\s()-]+">
+                            <div class="invalid-feedback">Пожалуйста, введите корректный номер телефона.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="contactEmail" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Сообщение *</label>
+                            <textarea class="form-control" id="contactMessage" name="message" rows="5" required></textarea>
+                            <div class="invalid-feedback">Пожалуйста, введите сообщение.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карта -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Как нас найти</h2>
+            </div>
+            <div class="map-container">
+                <!-- TODO: Добавить реальную карту (Яндекс.Карты или Google Maps) -->
+                <!-- Пример для Яндекс.Карт:
+                <div id="map" style="width: 100%; height: 400px;"></div>
+                <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU"></script>
+                -->
+                <div style="width: 100%; height: 400px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
+                    <p class="text-muted">Карта будет добавлена после настройки API</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="bi bi-hammer"></i> Stroiuslugi</h5>
+                    <p>Профессиональные строительные и отделочные работы. Строим от фундамента до крыши с гарантией качества.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Контакты</h5>
+                    <p><i class="bi bi-telephone"></i> <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                    <p><i class="bi bi-envelope"></i> <a href="mailto:info@stroiuslugi.by">info@stroiuslugi.by</a></p>
+                    <p><i class="bi bi-geo-alt"></i> г. Минск, ул. Строительная, д. 1</p>
+                    <!-- TODO: Обновить реальный адрес в Минске -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stroiuslugi. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Форма заявки -->
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Оставить заявку</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="clientName" class="form-label">Ваше имя *</label>
+                            <input type="text" class="form-control" id="clientName" name="name" required>
+                            <div class="invalid-feedback">Пожалуйста, введите ваше имя.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientPhone" class="form-label">Телефон *</label>
+                            <input type="tel" class="form-control" id="clientPhone" name="phone" required pattern="[0-9+\s()-]+">
+                            <div class="invalid-feedback">Пожалуйста, введите корректный номер телефона.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientMessage" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="clientMessage" name="message" rows="4" placeholder="Опишите, какие работы вас интересуют..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Обработка формы обратной связи
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // TODO: Интегрировать с backend API
+            alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+            this.classList.remove('was-validated');
+        });
+    </script>
+</body>
+</html>
+
+

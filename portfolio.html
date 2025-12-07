@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио Stroiuslugi - галерея выполненных работ. Примеры наших проектов по строительству и отделке.">
+    <meta name="keywords" content="портфолио, выполненные работы, проекты, галерея">
+    <meta property="og:title" content="Портфолио - Stroiuslugi">
+    <meta property="og:description" content="Галерея выполненных работ. Примеры наших проектов.">
+    <title>Портфолио - Stroiuslugi | Галерея выполненных работ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-hammer"></i> Stroiuslugi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Услуги
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services/painting.html">Малярные работы</a></li>
+                            <li><a class="dropdown-item" href="services/rough_finish.html">Черновая отделка</a></li>
+                            <li><a class="dropdown-item" href="services/flooring.html">Финишные покрытия</a></li>
+                            <li><a class="dropdown-item" href="services/tiling.html">Укладка плитки</a></li>
+                            <li><a class="dropdown-item" href="services/construction.html">Строительные работы</a></li>
+                            <li><a class="dropdown-item" href="services/facade.html">Фасадные работы</a></li>
+                            <li><a class="dropdown-item" href="services/paving.html">Тротуарная плитка</a></li>
+                            <li><a class="dropdown-item" href="services/concrete.html">Бетонные работы</a></li>
+                            <li><a class="dropdown-item" href="services/roofing.html">Кровельные работы</a></li>
+                            <li><a class="dropdown-item" href="services/electricity_plumbing.html">Электрика и сантехника</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Портфолио</h1>
+            <p class="lead">Галерея наших выполненных работ</p>
+        </div>
+    </section>
+
+    <!-- Фильтры -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary active" data-filter="all">Все работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="painting">Малярные работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="rough_finish">Черновая отделка</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="flooring">Финишные покрытия</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="tiling">Укладка плитки</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="construction">Строительные работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="facade">Фасадные работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="paving">Тротуарная плитка</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="concrete">Бетонные работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="roofing">Кровельные работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="electricity_plumbing">Электрика и сантехника</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Галерея -->
+            <div class="row g-4" id="portfolioGallery">
+                <!-- TODO: Заменить на реальные фото выполненных работ с правильными категориями -->
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400?text=Малярные+работы+1" alt="Малярные работы 1">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400?text=Черновая+отделка+1" alt="Черновая отделка 1">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400?text=Финишные+покрытия+1" alt="Финишные покрытия 1">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400?text=Укладка+плитки+1" alt="Укладка плитки 1">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400?text=Строительные+работы+1" alt="Строительные работы 1">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400?text=Фасадные+работы+1" alt="Фасадные работы 1">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="paving">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400?text=Тротуарная+плитка+1" alt="Тротуарная плитка 1">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="concrete">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400?text=Бетонные+работы+1" alt="Бетонные работы 1">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="roofing">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400?text=Кровельные+работы+1" alt="Кровельные работы 1">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400?text=Электрика+и+сантехника+1" alt="Электрика и сантехника 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Хотите такой же результат?</h2>
+            <p class="lead mb-4">Оставьте заявку и получите бесплатную консультацию</p>
+            <button class="btn btn-primary btn-lg" onclick="openOrderModal()">
+                <i class="bi bi-envelope"></i> Оставить заявку
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="bi bi-hammer"></i> Stroiuslugi</h5>
+                    <p>Профессиональные строительные и отделочные работы. Строим от фундамента до крыши с гарантией качества.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Контакты</h5>
+                    <p><i class="bi bi-telephone"></i> <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                    <p><i class="bi bi-envelope"></i> <a href="mailto:info@stroiuslugi.by">info@stroiuslugi.by</a></p>
+                    <p><i class="bi bi-geo-alt"></i> г. Минск, ул. Строительная, д. 1</p>
+                    <!-- TODO: Обновить реальный адрес в Минске -->
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Социальные сети</h5>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener"><i class="bi bi-vk"></i></a>
+                        <a href="#" target="_blank" rel="noopener"><i class="bi bi-telegram"></i></a>
+                        <a href="#" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stroiuslugi. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Форма заявки -->
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Оставить заявку</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="clientName" class="form-label">Ваше имя *</label>
+                            <input type="text" class="form-control" id="clientName" name="name" required>
+                            <div class="invalid-feedback">Пожалуйста, введите ваше имя.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientPhone" class="form-label">Телефон *</label>
+                            <input type="tel" class="form-control" id="clientPhone" name="phone" required pattern="[0-9+\s()-]+">
+                            <div class="invalid-feedback">Пожалуйста, введите корректный номер телефона.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientMessage" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="clientMessage" name="message" rows="4" placeholder="Опишите, какие работы вас интересуют..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Фильтрация портфолио
+        document.querySelectorAll('[data-filter]').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Обновляем активную кнопку
+                document.querySelectorAll('[data-filter]').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Фильтруем элементы
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+

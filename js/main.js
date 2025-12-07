@@ -1,0 +1,144 @@
+/**
+ * Основной JavaScript файл для сайта строительной компании
+ * Содержит общую логику: модальные окна, lightbox, инициализация
+ */
+
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+    initLightbox();
+    initFormValidation();
+});
+
+/**
+ * Инициализация Lightbox для галереи
+ * Использует Bootstrap Modal для отображения изображений
+ * Исключает изображения с классом 'service-gallery-item' (они обрабатываются services-gallery.js)
+ */
+function initLightbox() {
+    // Исключаем изображения с классом service-gallery-item, чтобы избежать конфликта
+    const galleryItems = document.querySelectorAll('.gallery-item img:not(.service-gallery-item)');
+    
+    galleryItems.forEach((img, index) => {
+        img.addEventListener('click', function() {
+            const lightboxModal = document.getElementById('lightboxModal');
+            if (!lightboxModal) {
+                createLightboxModal();
+            }
+            
+            const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('lightboxModal'));
+            const modalImg = document.getElementById('lightboxImage');
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            modal.show();
+        });
+    });
+}
+
+/**
+ * Создание модального окна для Lightbox
+ */
+function createLightboxModal() {
+    const modalHTML = `
+        <div class="modal fade" id="lightboxModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body p-0 text-center">
+                        <img id="lightboxImage" src="" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+}
+
+/**
+ * Инициализация валидации форм
+ */
+function initFormValidation() {
+    const forms = document.querySelectorAll('.needs-validation');
+    
+    forms.forEach(form => {
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            
+            form.classList.add('was-validated');
+        }, false);
+    });
+}
+
+/**
+ * Открытие модального окна заявки
+ * Можно вызывать из любого места на странице
+ */
+function openOrderModal() {
+    const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('orderModal'));
+    modal.show();
+}
+
+/**
+ * Обработка отправки формы заявки
+ * TODO: Интегрировать с backend API или email сервисом
+ */
+function handleOrderFormSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    // TODO: Отправить данные на сервер
+    // Пример: fetch('/api/order', { method: 'POST', body: formData })
+    
+    // Временная заглушка - показываем сообщение об успехе
+    alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
+    
+    // Закрываем модальное окно
+    const modal = bootstrap.Modal.getInstance(document.getElementById('orderModal'));
+    modal.hide();
+    
+    // Очищаем форму
+    form.reset();
+    form.classList.remove('was-validated');
+}
+
+// Добавляем обработчик для всех форм заказа
+document.addEventListener('DOMContentLoaded', function() {
+    const orderForms = document.querySelectorAll('#orderForm');
+    orderForms.forEach(form => {
+        form.addEventListener('submit', handleOrderFormSubmit);
+    });
+});
+
+/**
+ * Плавная прокрутка к секции
+ */
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+/**
+ * Инициализация карты (если используется Яндекс.Карты или Google Maps)
+ * TODO: Добавить API ключ и настроить карту
+ */
+function initMap() {
+    // TODO: Инициализировать карту
+    // Пример для Google Maps:
+    // const map = new google.maps.Map(document.getElementById('map'), { ... });
+    
+    console.log('Карта будет инициализирована после добавления API ключа');
+}
+
+
+
+
+
+
