@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Малярные работы в Минске и области. Покраска стен, потолков, фасадов от Stroiuslugi.by. Используем сертифицированные краски, гарантия 2 года. Выезд мастера бесплатно.">
+    <meta name="keywords" content="малярные работы Минск, покраска стен Минск, покраска потолков, покраска фасадов Минская область, маляр Минск">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Малярные работы в Минске - Покраска стен, потолков, фасадов">
+    <meta property="og:description" content="Профессиональная покраска в Минске и Минской области. Сертифицированные материалы, опытные маляры, гарантия качества.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/stroiuslugi/services/painting.html">
+    
+    <title>Малярные работы в Минске - Покраска стен и потолков | Stroiuslugi.by</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="bi bi-house"></i> Stroiuslugi.by
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Услуги
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="painting.html">Малярные работы</a></li>
+                            <li><a class="dropdown-item" href="rough_finish.html">Черновая отделка</a></li>
+                            <li><a class="dropdown-item" href="flooring.html">Финишные покрытия</a></li>
+                            <li><a class="dropdown-item" href="tiling.html">Укладка плитки</a></li>
+                            <li><a class="dropdown-item" href="construction.html">Строительные работы</a></li>
+                            <li><a class="dropdown-item" href="facade.html">Фасадные работы</a></li>
+                            <li><a class="dropdown-item" href="paving.html">Тротуарная плитка</a></li>
+                            <li><a class="dropdown-item" href="concrete.html">Бетонные работы</a></li>
+                            <li><a class="dropdown-item" href="roofing.html">Кровельные работы</a></li>
+                            <li><a class="dropdown-item" href="electricity_plumbing.html">Электрика и сантехника</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs: Главная → Услуги → Малярные работы -->
+    <!-- Навигационные хлебные крошки для улучшения UX и SEO -->
+    <div class="container mt-5 pt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="../index.html#services">Услуги</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Малярные работы</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Малярные работы в Минске и Минской области</h1>
+            <p class="lead">Покраска стен, потолков и фасадов с использованием сертифицированных материалов. Гарантия равномерного покрытия и долговечности</p>
+            <button class="btn btn-primary btn-lg" onclick="openOrderModal()">
+                <i class="bi bi-envelope"></i> Рассчитать стоимость покраски
+            </button>
+        </div>
+    </section>
+
+    <!-- Описание услуги -->
+    <section class="service-description">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Покраска помещений и фасадов в Минске</h2>
+                    <p class="lead">Выполняем малярные работы любой сложности: от покраски одной комнаты до отделки фасадов многоэтажных зданий. Работаем с различными типами поверхностей и красящих составов.</p>
+                    
+                    <p>В Минске и Минской области наши маляры покрасили сотни объектов: квартиры, офисы, частные дома, производственные помещения. Используем краски от проверенных производителей, которые хорошо зарекомендовали себя в условиях белорусского климата.</p>
+                    
+                    <h3>Виды выполняемых работ:</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Покраска стен и потолков в жилых и коммерческих помещениях</li>
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Фасадная покраска зданий с подготовкой и защитой от атмосферных воздействий</li>
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Декоративная покраска с эффектами (венецианская штукатурка, фактурные покрытия)</li>
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Покраска деревянных конструкций (окна, двери, лестницы, фасады)</li>
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Покраска металлических элементов (радиаторы, трубы, ограждения)</li>
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Защитная покраска с антикоррозийными и огнезащитными свойствами</li>
+                    </ul>
+
+                    <h3>Как мы работаем:</h3>
+                    <p>Перед покраской тщательно готовим поверхности: устраняем неровности шпатлевкой, шлифуем до гладкости, наносим грунтовку для улучшения адгезии. Это обеспечивает равномерное нанесение краски и отсутствие дефектов. Используем профессиональные инструменты: валики разных размеров, кисти для труднодоступных мест, краскопульты для больших площадей.</p>
+
+                    <p>Подбираем краски с учетом типа поверхности, условий эксплуатации и пожеланий клиента. Для помещений с повышенной влажностью (ванные, кухни) применяем влагостойкие составы, для фасадов — атмосферостойкие краски, выдерживающие перепады температур и осадки.</p>
+
+                    <!-- TODO: Добавить более подробное описание услуги, специфичные детали -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Быстрый расчет</h5>
+                            <p class="card-text">Оставьте заявку и получите бесплатную смету в течение 24 часов</p>
+                            <button class="btn btn-primary w-100" onclick="openOrderModal()">Получить смету</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея работ -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Примеры выполненных работ</h2>
+                <p>Галерея наших малярных работ</p>
+            </div>
+            <div class="row g-4">
+                <!-- Галерея изображений: Bootstrap сетка (col-12 на мобильных, col-sm-6 на планшетах, col-md-3 на десктопе) -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_1.webp" alt="Малярные работы - пример 1" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_2.webp" alt="Малярные работы - пример 2" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_3.webp" alt="Малярные работы - пример 3" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_4.webp" alt="Малярные работы - пример 4" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_5.webp" alt="Малярные работы - пример 5" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_6.webp" alt="Малярные работы - пример 6" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_7.webp" alt="Малярные работы - пример 7" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_8.webp" alt="Малярные работы - пример 8" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_9.webp" alt="Малярные работы - пример 9" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_10.webp" alt="Малярные работы - пример 10" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_11.webp" alt="Малярные работы - пример 11" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_12.webp" alt="Малярные работы - пример 12" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_13.webp" alt="Малярные работы - пример 13" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_14.webp" alt="Малярные работы - пример 14" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_15.webp" alt="Малярные работы - пример 15" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_16.webp" alt="Малярные работы - пример 16" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_17.webp" alt="Малярные работы - пример 17" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_18.webp" alt="Малярные работы - пример 18" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_19.webp" alt="Малярные работы - пример 19" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_20.webp" alt="Малярные работы - пример 20" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_21.webp" alt="Малярные работы - пример 21" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_22.webp" alt="Малярные работы - пример 22" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/painting/painting_stroiuslugi.by_23.webp" alt="Малярные работы - пример 23" class="service-gallery-item">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Почему выбирают нас для покраски в Минске</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="advantage-item">
+                        <i class="bi bi-palette"></i>
+                        <h4>Колористика на заказ</h4>
+                        <p>Подбираем оттенки по каталогам RAL, NCS или создаем индивидуальные цвета. Колеровка краски в Минске</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="advantage-item">
+                        <i class="bi bi-shield-check"></i>
+                        <h4>Гарантия 2 года</h4>
+                        <p>Официальная гарантия на покраску. При появлении дефектов устраняем бесплатно в течение гарантийного срока</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="advantage-item">
+                        <i class="bi bi-tools"></i>
+                        <h4>Современное оборудование</h4>
+                        <p>Используем краскопульты, профессиональные валики и кисти. Это обеспечивает равномерное покрытие без разводов</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="advantage-item">
+                        <i class="bi bi-speedometer2"></i>
+                        <h4>Оперативность</h4>
+                        <p>Покраска стандартной комнаты занимает 1-2 дня. Работаем без простоев, соблюдаем оговоренные сроки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Отзывы о малярных работах</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- TODO: Добавить реальные отзывы о малярных работах из Минска -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="mb-3">"Покрасили всю квартиру в Минске. Мастера подобрали идеальные оттенки, покраска получилась ровной, без разводов и подтеков. Прошло уже полгода — все выглядит как новое. Рекомендую!"</p>
+                        <div class="author">— Ольга Петрова, Минск</div>
+                    </div>
+                    <div class="testimonial-card mt-4">
+                        <div class="stars">★★★★★</div>
+                        <p class="mb-3">"Нужно было покрасить фасад частного дома в Минской области. Команда Stroiuslugi.by выполнила работу быстро, использовали атмосферостойкую краску. Фасад выглядит отлично, краска не выгорает на солнце."</p>
+                        <div class="author">— Виктор Семенов, Минский район</div>
+                    </div>
+                    <div class="testimonial-card mt-4">
+                        <div class="stars">★★★★★</div>
+                        <p class="mb-3">"Покраска офиса в центре Минска. Важно было не нарушить рабочий процесс. Маляры работали в выходные, все аккуратно укрыли пленкой. Результат превзошел ожидания — офис преобразился."</p>
+                        <div class="author">— Ирина Волкова, Минск</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Нужна покраска в Минске или области?</h2>
+            <p class="lead mb-4">Получите бесплатную консультацию и расчет стоимости малярных работ. Выезжаем на объект в день обращения</p>
+            <button class="btn btn-primary btn-lg" onclick="openOrderModal()">
+                <i class="bi bi-envelope"></i> Рассчитать стоимость покраски
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="bi bi-house"></i> Stroiuslugi.by</h5>
+                    <p>Профессиональные строительные и отделочные работы. Строим от фундамента до крыши с гарантией качества.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Контакты</h5>
+                    <p><i class="bi bi-telephone"></i> <a href="tel:+375297303993">+375297303993</a></p>
+                    <p><i class="bi bi-envelope"></i> <a href="mailto:info@stroiuslugi.by">info@stroiuslugi.by</a></p>
+                    <p><i class="bi bi-geo-alt"></i> Минская область, г. Несвиж, улица Кутузова, 1</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Юридическая информация</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>УНП:</strong> 693167941</li>
+                        <li class="mb-2"><strong>Адрес:</strong> Минская область, г. Несвиж, улица Кутузова, 1</li>
+                        <li class="mb-2"><strong>Лицензия:</strong> №0196424, выдана Несвижским районным исполнительным комитетом</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stroiuslugi.by. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Форма заявки -->
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Оставить заявку</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="clientName" class="form-label">Ваше имя *</label>
+                            <input type="text" class="form-control" id="clientName" name="name" required>
+                            <div class="invalid-feedback">Пожалуйста, введите ваше имя.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientPhone" class="form-label">Телефон *</label>
+                            <input type="tel" class="form-control" id="clientPhone" name="phone" required pattern="[0-9+\s()-]+">
+                            <div class="invalid-feedback">Пожалуйста, введите корректный номер телефона.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientMessage" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="clientMessage" name="message" rows="4" placeholder="Опишите, какие работы вас интересуют..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    <!-- Services Gallery JS - Lightbox для галереи услуг -->
+    <script src="../js/services-gallery.js"></script>
+    <!-- Скрипт отправки заявок в Telegram-бот: обрабатывает форму из модального окна -->
+    <script src="../js/send-form.js"></script>
+</body>
+</html>
+
+
