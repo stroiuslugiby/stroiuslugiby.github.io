@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио Stroiuslugi.by - галерея выполненных работ. Примеры наших проектов по строительству и отделке.">
+    <meta name="keywords" content="портфолио, выполненные работы, проекты, галерея">
+    <meta property="og:title" content="Портфолио - Stroiuslugi.by">
+    <meta property="og:description" content="Галерея выполненных работ. Примеры наших проектов.">
+    <title>Портфолио - Stroiuslugi.by | Галерея выполненных работ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-hammer"></i> Stroiuslugi.by
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Услуги
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services/painting.html">Малярные работы</a></li>
+                            <li><a class="dropdown-item" href="services/rough_finish.html">Черновая отделка</a></li>
+                            <li><a class="dropdown-item" href="services/flooring.html">Финишные покрытия</a></li>
+                            <li><a class="dropdown-item" href="services/tiling.html">Укладка плитки</a></li>
+                            <li><a class="dropdown-item" href="services/construction.html">Строительные работы</a></li>
+                            <li><a class="dropdown-item" href="services/facade.html">Фасадные работы</a></li>
+                            <li><a class="dropdown-item" href="services/paving.html">Тротуарная плитка</a></li>
+                            <li><a class="dropdown-item" href="services/concrete.html">Бетонные работы</a></li>
+                            <li><a class="dropdown-item" href="services/roofing.html">Кровельные работы</a></li>
+                            <li><a class="dropdown-item" href="services/electricity_plumbing.html">Электрика и сантехника</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs: Главная → Портфолио -->
+    <div class="container mt-5 pt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Портфолио</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Портфолио</h1>
+            <p class="lead">Галерея наших выполненных работ</p>
+        </div>
+    </section>
+
+    <!-- Фильтры -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <!-- Кнопки фильтрации портфолио: обернуты в flex-контейнер для корректного переноса на новую строку -->
+                    <!-- Первая кнопка активна по умолчанию, фильтр применяется автоматически при загрузке страницы -->
+                    <div class="d-flex flex-wrap gap-2" role="group">
+                        <button type="button" class="btn btn-outline-primary active" data-filter="painting">Малярные работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="rough_finish">Черновая отделка</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="flooring">Финишные покрытия</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="tiling">Укладка плитки</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="construction">Строительные работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="facade">Фасадные работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="paving">Тротуарная плитка</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="concrete">Бетонные работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="roofing">Кровельные работы</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="electricity_plumbing">Электрика и сантехника</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Галерея портфолио -->
+            <!-- Каждое изображение имеет атрибут data-category для фильтрации -->
+            <div class="row g-4" id="portfolioGallery">
+                <!-- Малярные работы (painting) - все 23 изображения из страницы услуг -->
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_1.webp" alt="Малярные работы - пример 1" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_2.webp" alt="Малярные работы - пример 2" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_3.webp" alt="Малярные работы - пример 3" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_4.webp" alt="Малярные работы - пример 4" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_5.webp" alt="Малярные работы - пример 5" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_6.webp" alt="Малярные работы - пример 6" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_7.webp" alt="Малярные работы - пример 7" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_8.webp" alt="Малярные работы - пример 8" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_9.webp" alt="Малярные работы - пример 9" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_10.webp" alt="Малярные работы - пример 10" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_11.webp" alt="Малярные работы - пример 11" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_12.webp" alt="Малярные работы - пример 12" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_13.webp" alt="Малярные работы - пример 13" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_14.webp" alt="Малярные работы - пример 14" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_15.webp" alt="Малярные работы - пример 15" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_16.webp" alt="Малярные работы - пример 16" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_17.webp" alt="Малярные работы - пример 17" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_18.webp" alt="Малярные работы - пример 18" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_19.webp" alt="Малярные работы - пример 19" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_20.webp" alt="Малярные работы - пример 20" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_21.webp" alt="Малярные работы - пример 21" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_22.webp" alt="Малярные работы - пример 22" data-category="painting">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="painting">
+                    <div class="gallery-item">
+                        <img src="img/painting/painting_stroiuslugi.by_23.webp" alt="Малярные работы - пример 23" data-category="painting">
+                    </div>
+                </div>
+
+                <!-- Черновая отделка (rough_finish) - все 21 изображение из страницы услуг -->
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_1.webp" alt="Черновая отделка - пример 1" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_2.webp" alt="Черновая отделка - пример 2" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_3.webp" alt="Черновая отделка - пример 3" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_4.webp" alt="Черновая отделка - пример 4" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_5.webp" alt="Черновая отделка - пример 5" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_6.webp" alt="Черновая отделка - пример 6" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_7.webp" alt="Черновая отделка - пример 7" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_8.webp" alt="Черновая отделка - пример 8" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_9.webp" alt="Черновая отделка - пример 9" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_10.webp" alt="Черновая отделка - пример 10" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_11.webp" alt="Черновая отделка - пример 11" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_12.webp" alt="Черновая отделка - пример 12" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_13.webp" alt="Черновая отделка - пример 13" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_14.webp" alt="Черновая отделка - пример 14" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_15.webp" alt="Черновая отделка - пример 15" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_16.webp" alt="Черновая отделка - пример 16" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_17.webp" alt="Черновая отделка - пример 17" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_18.webp" alt="Черновая отделка - пример 18" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_19.webp" alt="Черновая отделка - пример 19" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_20.webp" alt="Черновая отделка - пример 20" data-category="rough_finish">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="rough_finish">
+                    <div class="gallery-item">
+                        <img src="img/rough_finish/rough_finish_stroiuslugi.by_21.webp" alt="Черновая отделка - пример 21" data-category="rough_finish">
+                    </div>
+                </div>
+
+                <!-- Фасадные работы (facade) - все 48 изображений из страницы услуг -->
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_1.webp" alt="Фасадные работы - пример 1" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_2.webp" alt="Фасадные работы - пример 2" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_3.webp" alt="Фасадные работы - пример 3" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_4.webp" alt="Фасадные работы - пример 4" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_5.webp" alt="Фасадные работы - пример 5" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_6.webp" alt="Фасадные работы - пример 6" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_7.webp" alt="Фасадные работы - пример 7" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_8.webp" alt="Фасадные работы - пример 8" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_9.webp" alt="Фасадные работы - пример 9" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_10.webp" alt="Фасадные работы - пример 10" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_11.webp" alt="Фасадные работы - пример 11" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_12.webp" alt="Фасадные работы - пример 12" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_13.webp" alt="Фасадные работы - пример 13" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_14.webp" alt="Фасадные работы - пример 14" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_15.webp" alt="Фасадные работы - пример 15" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_16.webp" alt="Фасадные работы - пример 16" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_17.webp" alt="Фасадные работы - пример 17" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_18.webp" alt="Фасадные работы - пример 18" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_19.webp" alt="Фасадные работы - пример 19" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_20.webp" alt="Фасадные работы - пример 20" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_21.webp" alt="Фасадные работы - пример 21" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_22.webp" alt="Фасадные работы - пример 22" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_23.webp" alt="Фасадные работы - пример 23" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_24.webp" alt="Фасадные работы - пример 24" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_25.webp" alt="Фасадные работы - пример 25" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_26.webp" alt="Фасадные работы - пример 26" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_27.webp" alt="Фасадные работы - пример 27" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_28.webp" alt="Фасадные работы - пример 28" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_29.webp" alt="Фасадные работы - пример 29" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_30.webp" alt="Фасадные работы - пример 30" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_31.webp" alt="Фасадные работы - пример 31" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_32.webp" alt="Фасадные работы - пример 32" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_33.webp" alt="Фасадные работы - пример 33" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_34.webp" alt="Фасадные работы - пример 34" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_35.webp" alt="Фасадные работы - пример 35" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_36.webp" alt="Фасадные работы - пример 36" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_37.webp" alt="Фасадные работы - пример 37" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_38.webp" alt="Фасадные работы - пример 38" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_39.webp" alt="Фасадные работы - пример 39" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_40.webp" alt="Фасадные работы - пример 40" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_41.webp" alt="Фасадные работы - пример 41" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_42.webp" alt="Фасадные работы - пример 42" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_43.webp" alt="Фасадные работы - пример 43" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_44.webp" alt="Фасадные работы - пример 44" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_45.webp" alt="Фасадные работы - пример 45" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_46.webp" alt="Фасадные работы - пример 46" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_47.webp" alt="Фасадные работы - пример 47" data-category="facade">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="facade">
+                    <div class="gallery-item">
+                        <img src="img/facade/facade_stroiuslugi.by_48.webp" alt="Фасадные работы - пример 48" data-category="facade">
+                    </div>
+                </div>
+
+                <!-- Финишные покрытия (flooring) - все 13 изображений из страницы услуг -->
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_1.webp" alt="Финишные покрытия - пример 1" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_2.webp" alt="Финишные покрытия - пример 2" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_3.webp" alt="Финишные покрытия - пример 3" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_4.webp" alt="Финишные покрытия - пример 4" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_5.webp" alt="Финишные покрытия - пример 5" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_6.webp" alt="Финишные покрытия - пример 6" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_7.webp" alt="Финишные покрытия - пример 7" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_8.webp" alt="Финишные покрытия - пример 8" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_9.webp" alt="Финишные покрытия - пример 9" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_10.webp" alt="Финишные покрытия - пример 10" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_11.webp" alt="Финишные покрытия - пример 11" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_12.webp" alt="Финишные покрытия - пример 12" data-category="flooring">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="flooring">
+                    <div class="gallery-item">
+                        <img src="img/flooring/flooring_stroiuslugi.by_13.webp" alt="Финишные покрытия - пример 13" data-category="flooring">
+                    </div>
+                </div>
+
+                <!-- Укладка плитки (tiling) - все 43 изображения из страницы услуг -->
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_1.webp" alt="Укладка плитки - пример 1" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_2.webp" alt="Укладка плитки - пример 2" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_3.webp" alt="Укладка плитки - пример 3" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_4.webp" alt="Укладка плитки - пример 4" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_5.webp" alt="Укладка плитки - пример 5" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_6.webp" alt="Укладка плитки - пример 6" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_7.webp" alt="Укладка плитки - пример 7" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_8.webp" alt="Укладка плитки - пример 8" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_9.webp" alt="Укладка плитки - пример 9" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_10.webp" alt="Укладка плитки - пример 10" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_11.webp" alt="Укладка плитки - пример 11" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_12.webp" alt="Укладка плитки - пример 12" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_13.webp" alt="Укладка плитки - пример 13" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_14.webp" alt="Укладка плитки - пример 14" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_15.webp" alt="Укладка плитки - пример 15" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_16.webp" alt="Укладка плитки - пример 16" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_17.webp" alt="Укладка плитки - пример 17" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_18.webp" alt="Укладка плитки - пример 18" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_19.webp" alt="Укладка плитки - пример 19" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_20.webp" alt="Укладка плитки - пример 20" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_21.webp" alt="Укладка плитки - пример 21" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_22.webp" alt="Укладка плитки - пример 22" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_23.webp" alt="Укладка плитки - пример 23" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_24.webp" alt="Укладка плитки - пример 24" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_25.webp" alt="Укладка плитки - пример 25" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_26.webp" alt="Укладка плитки - пример 26" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_27.webp" alt="Укладка плитки - пример 27" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_28.webp" alt="Укладка плитки - пример 28" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_29.webp" alt="Укладка плитки - пример 29" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_30.webp" alt="Укладка плитки - пример 30" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_31.webp" alt="Укладка плитки - пример 31" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_32.webp" alt="Укладка плитки - пример 32" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_33.webp" alt="Укладка плитки - пример 33" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_34.webp" alt="Укладка плитки - пример 34" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_35.webp" alt="Укладка плитки - пример 35" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_36.webp" alt="Укладка плитки - пример 36" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_37.webp" alt="Укладка плитки - пример 37" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_38.webp" alt="Укладка плитки - пример 38" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_39.webp" alt="Укладка плитки - пример 39" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_40.webp" alt="Укладка плитки - пример 40" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_41.webp" alt="Укладка плитки - пример 41" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_42.webp" alt="Укладка плитки - пример 42" data-category="tiling">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="tiling">
+                    <div class="gallery-item">
+                        <img src="img/tiling/tiling_stroiuslugi.by_43.webp" alt="Укладка плитки - пример 43" data-category="tiling">
+                    </div>
+                </div>
+
+                <!-- Строительные работы (construction) - все 24 изображения из страницы услуг -->
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_1.webp" alt="Строительные работы - пример 1" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_2.webp" alt="Строительные работы - пример 2" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_3.webp" alt="Строительные работы - пример 3" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_4.webp" alt="Строительные работы - пример 4" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_5.webp" alt="Строительные работы - пример 5" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_6.webp" alt="Строительные работы - пример 6" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_7.webp" alt="Строительные работы - пример 7" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_8.webp" alt="Строительные работы - пример 8" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_9.webp" alt="Строительные работы - пример 9" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_10.webp" alt="Строительные работы - пример 10" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_11.webp" alt="Строительные работы - пример 11" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_12.webp" alt="Строительные работы - пример 12" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_13.webp" alt="Строительные работы - пример 13" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_14.webp" alt="Строительные работы - пример 14" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_15.webp" alt="Строительные работы - пример 15" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_16.webp" alt="Строительные работы - пример 16" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_17.webp" alt="Строительные работы - пример 17" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_18.webp" alt="Строительные работы - пример 18" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_19.webp" alt="Строительные работы - пример 19" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_20.webp" alt="Строительные работы - пример 20" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_21.webp" alt="Строительные работы - пример 21" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_22.webp" alt="Строительные работы - пример 22" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_23.webp" alt="Строительные работы - пример 23" data-category="construction">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="construction">
+                    <div class="gallery-item">
+                        <img src="img/construction/construction_stroiuslugi.by_24.webp" alt="Строительные работы - пример 24" data-category="construction">
+                    </div>
+                </div>
+
+                <!-- Тротуарная плитка (paving) - все 5 изображений из страницы услуг -->
+                <div class="col-md-4 portfolio-item" data-category="paving">
+                    <div class="gallery-item">
+                        <img src="img/paving/paving_stroiuslugi.by_42.webp" alt="Тротуарная плитка - пример 1" data-category="paving">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="paving">
+                    <div class="gallery-item">
+                        <img src="img/paving/paving_stroiuslugi.by_44.webp" alt="Тротуарная плитка - пример 2" data-category="paving">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="paving">
+                    <div class="gallery-item">
+                        <img src="img/paving/paving_stroiuslugi.by_46.webp" alt="Тротуарная плитка - пример 3" data-category="paving">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="paving">
+                    <div class="gallery-item">
+                        <img src="img/paving/paving_stroiuslugi.by_47.webp" alt="Тротуарная плитка - пример 4" data-category="paving">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="paving">
+                    <div class="gallery-item">
+                        <img src="img/paving/paving_stroiuslugi.by_48.webp" alt="Тротуарная плитка - пример 5" data-category="paving">
+                    </div>
+                </div>
+
+                <!-- Электрика (electric) - первые 8 изображений из electricity_plumbing -->
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_1.webp" alt="Электрика - пример 1" data-category="electric">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_2.webp" alt="Электрика - пример 2" data-category="electric">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_3.webp" alt="Электрика - пример 3" data-category="electric">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_4.webp" alt="Электрика - пример 4" data-category="electric">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_5.webp" alt="Электрика - пример 5" data-category="electric">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_6.webp" alt="Электрика - пример 6" data-category="electric">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_7.webp" alt="Электрика - пример 7" data-category="electric">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_8.webp" alt="Электрика - пример 8" data-category="electric">
+                    </div>
+                </div>
+
+                <!-- Сантехника (plumbing) - остальные 7 изображений из electricity_plumbing -->
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_9.webp" alt="Сантехника - пример 1" data-category="plumbing">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_10.webp" alt="Сантехника - пример 2" data-category="plumbing">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_11.webp" alt="Сантехника - пример 3" data-category="plumbing">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_12.webp" alt="Сантехника - пример 4" data-category="plumbing">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_13.webp" alt="Сантехника - пример 5" data-category="plumbing">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_14.webp" alt="Сантехника - пример 6" data-category="plumbing">
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-item" data-category="electricity_plumbing">
+                    <div class="gallery-item">
+                        <img src="img/electricity_plumbing/electricity_plumbing_stroiuslugi.by_15.webp" alt="Сантехника - пример 7" data-category="plumbing">
+                    </div>
+                </div>
+
+                <!-- Бетонные работы (concrete) - изображений нет, фильтр оставлен без элементов -->
+                <!-- TODO: добавить фото для категории concrete -->
+
+                <!-- Кровельные работы (roofing) - изображений нет, фильтр оставлен без элементов -->
+                <!-- TODO: добавить фото для категории roofing -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Хотите такой же результат?</h2>
+            <p class="lead mb-4">Оставьте заявку и получите бесплатную консультацию</p>
+            <button class="btn btn-primary btn-lg" onclick="openOrderModal()">
+                <i class="bi bi-envelope"></i> Оставить заявку
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="bi bi-hammer"></i> Stroiuslugi.by</h5>
+                    <p>Профессиональные строительные и отделочные работы. Строим от фундамента до крыши с гарантией качества.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Контакты</h5>
+                    <p><i class="bi bi-telephone"></i> <a href="tel:+375297303993">+375297303993</a></p>
+                    <p><i class="bi bi-envelope"></i> <a href="mailto:info@stroiuslugi.by">info@stroiuslugi.by</a></p>
+                    <p><i class="bi bi-geo-alt"></i> Минская область, г. Несвиж, улица Кутузова, 1</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Юридическая информация</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>УНП:</strong> 693167941</li>
+                        <li class="mb-2"><strong>Адрес:</strong> Минская область, г. Несвиж, улица Кутузова, 1</li>
+                        <li class="mb-2"><strong>Лицензия:</strong> №0196424, выдана Несвижским районным исполнительным комитетом</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stroiuslugi.by. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Форма заявки -->
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Оставить заявку</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="clientName" class="form-label">Ваше имя *</label>
+                            <input type="text" class="form-control" id="clientName" name="name" required>
+                            <div class="invalid-feedback">Пожалуйста, введите ваше имя.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientPhone" class="form-label">Телефон *</label>
+                            <input type="tel" class="form-control" id="clientPhone" name="phone" required pattern="[0-9+\s()-]+">
+                            <div class="invalid-feedback">Пожалуйста, введите корректный номер телефона.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientMessage" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="clientMessage" name="message" rows="4" placeholder="Опишите, какие работы вас интересуют..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Подключение модуля фильтрации портфолио -->
+    <script src="js/portfolio-filter.js"></script>
+    <!-- Скрипт отправки заявок в Telegram-бот: обрабатывает форму из модального окна -->
+    <script src="js/send-form.js"></script>
+</body>
+</html>
+
+

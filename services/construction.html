@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Строительные и монтажные работы в Минске. Перепланировка, возведение конструкций, монтаж перегородок от Stroiuslugi.by. Соблюдение норм, гарантия качества.">
+    <meta name="keywords" content="строительные работы Минск, перепланировка Минск, монтаж перегородок, возведение конструкций Минск, строительство Минск">
+    <meta property="og:title" content="Строительные работы в Минске - Перепланировка и монтаж">
+    <meta property="og:description" content="Профессиональные строительные и монтажные работы в Минске и области. Перепланировка, возведение конструкций с соблюдением норм.">
+    <title>Строительные работы в Минске - Перепланировка и монтаж конструкций | Stroiuslugi.by</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><i class="bi bi-hammer"></i> Stroiuslugi.by</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Услуги</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="painting.html">Малярные работы</a></li>
+                            <li><a class="dropdown-item" href="rough_finish.html">Черновая отделка</a></li>
+                            <li><a class="dropdown-item" href="flooring.html">Финишные покрытия</a></li>
+                            <li><a class="dropdown-item" href="tiling.html">Укладка плитки</a></li>
+                            <li><a class="dropdown-item active" href="construction.html">Строительные работы</a></li>
+                            <li><a class="dropdown-item" href="facade.html">Фасадные работы</a></li>
+                            <li><a class="dropdown-item" href="paving.html">Тротуарная плитка</a></li>
+                            <li><a class="dropdown-item" href="concrete.html">Бетонные работы</a></li>
+                            <li><a class="dropdown-item" href="roofing.html">Кровельные работы</a></li>
+                            <li><a class="dropdown-item" href="electricity_plumbing.html">Электрика и сантехника</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../portfolio.html">Портфолио</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">О компании</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs: Главная → Услуги → Строительные работы -->
+    <!-- Навигационные хлебные крошки для улучшения UX и SEO -->
+    <div class="container mt-5 pt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="../index.html#services">Услуги</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Строительные работы</li>
+            </ol>
+        </nav>
+    </div>
+
+    <section class="service-hero">
+        <div class="container">
+            <h1>Строительные и монтажные работы в Минске</h1>
+            <p class="lead">Перепланировка помещений, возведение конструкций, монтаж перегородок. Работаем с соблюдением строительных норм и требований</p>
+            <button class="btn btn-primary btn-lg" onclick="openOrderModal()"><i class="bi bi-envelope"></i> Получить консультацию</button>
+        </div>
+    </section>
+
+    <section class="service-description">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Строительные и монтажные работы в Минске</h2>
+                    <p class="lead">Выполняем полный спектр строительных работ: от перепланировки квартир до возведения конструкций в частных домах. Работаем с соблюдением строительных норм и требований безопасности.</p>
+                    
+                    <p>В Минске и Минской области наши специалисты выполнили десятки проектов по перепланировке и монтажу конструкций. Используем качественные материалы от проверенных поставщиков, применяем современные технологии строительства. Все работы выполняются с учетом действующих норм и правил, при необходимости получаем разрешения на перепланировку.</p>
+                    
+                    <h3>Виды выполняемых работ:</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Монтаж перегородок из гипсокартона, газобетона, кирпича</li>
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Возведение несущих и ненесущих стен</li>
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Перепланировка квартир и офисов с согласованием</li>
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Монтаж металлических и деревянных конструкций</li>
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Установка окон и дверей с запениванием и отделкой</li>
+                        <li><i class="bi bi-check-circle text-success me-2"></i>Комплексный монтаж инженерных систем</li>
+                    </ul>
+
+                    <h3>Как мы работаем:</h3>
+                    <p>Перед началом работ проводим осмотр объекта, оцениваем состояние конструкций, определяем возможность перепланировки. Разрабатываем проект с учетом несущих стен, коммуникаций, требований безопасности. При необходимости помогаем с согласованием перепланировки в соответствующих инстанциях Минска.</p>
+                    
+                    <p>Используем качественные материалы: газобетонные блоки, гипсокартон от известных производителей, металлические профили для каркасов. При возведении конструкций применяем армирование, контролируем вертикальность и горизонтальность с помощью лазерного уровня. Все работы выполняются аккуратно, с минимальным количеством пыли и мусора.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Быстрый расчет</h5>
+                            <p class="card-text">Оставьте заявку и получите бесплатную смету</p>
+                            <button class="btn btn-primary w-100" onclick="openOrderModal()">Получить смету</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title"><h2>Примеры выполненных работ</h2></div>
+            <div class="row g-4">
+                <!-- Галерея изображений: Bootstrap сетка (col-12 на мобильных, col-sm-6 на планшетах, col-md-3 на десктопе) -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_1.webp" alt="Строительные работы - пример 1" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_2.webp" alt="Строительные работы - пример 2" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_3.webp" alt="Строительные работы - пример 3" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_4.webp" alt="Строительные работы - пример 4" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_5.webp" alt="Строительные работы - пример 5" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_6.webp" alt="Строительные работы - пример 6" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_7.webp" alt="Строительные работы - пример 7" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_8.webp" alt="Строительные работы - пример 8" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_9.webp" alt="Строительные работы - пример 9" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_10.webp" alt="Строительные работы - пример 10" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_11.webp" alt="Строительные работы - пример 11" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_12.webp" alt="Строительные работы - пример 12" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_13.webp" alt="Строительные работы - пример 13" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_14.webp" alt="Строительные работы - пример 14" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_15.webp" alt="Строительные работы - пример 15" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_16.webp" alt="Строительные работы - пример 16" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_17.webp" alt="Строительные работы - пример 17" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_18.webp" alt="Строительные работы - пример 18" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_19.webp" alt="Строительные работы - пример 19" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_20.webp" alt="Строительные работы - пример 20" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_21.webp" alt="Строительные работы - пример 21" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_22.webp" alt="Строительные работы - пример 22" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_23.webp" alt="Строительные работы - пример 23" class="service-gallery-item">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="gallery-item">
+                        <img src="../img/construction/construction_stroiuslugi.by_24.webp" alt="Строительные работы - пример 24" class="service-gallery-item">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title"><h2>Почему выбирают нас для строительных работ в Минске</h2></div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="advantage-item">
+                        <i class="bi bi-shield-check"></i>
+                        <h4>Соблюдение норм</h4>
+                        <p>Все работы выполняются в соответствии с СНиП и строительными нормами Беларуси. Помогаем с согласованием</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="advantage-item">
+                        <i class="bi bi-tools"></i>
+                        <h4>Опытные специалисты</h4>
+                        <p>Работают мастера со стажем от 7 лет, имеющие опыт работы с различными материалами и технологиями</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="advantage-item">
+                        <i class="bi bi-file-check"></i>
+                        <h4>Официальный договор</h4>
+                        <p>Все работы оформляются договором с указанием сроков, стоимости и гарантийных обязательств</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="advantage-item">
+                        <i class="bi bi-clock-history"></i>
+                        <h4>Соблюдение сроков</h4>
+                        <p>Фиксируем сроки в договоре и придерживаемся их. При задержках компенсируем неудобства</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title"><h2>Отзывы</h2></div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- TODO: Добавить реальные отзывы о строительных работах из Минска -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="mb-3">"Делали перепланировку трехкомнатной квартиры в Минске. Разделили большую комнату на две, перенесли кухню. Команда Stroiuslugi.by помогла с согласованием, все работы выполнили качественно и в срок. Перегородки стоят ровно, звукоизоляция хорошая. Очень довольны результатом!"</p>
+                        <div class="author">— Павел Морозов, Минск</div>
+                    </div>
+                    <div class="testimonial-card mt-4">
+                        <div class="stars">★★★★★</div>
+                        <p class="mb-3">"Строили пристройку к частному дому в Минской области. Возвели стены из газобетона, установили окна и двери. Все сделано профессионально, с соблюдением технологий. Дом стал просторнее, пристройка гармонично вписывается в общий вид. Спасибо мастерам!"</p>
+                        <div class="author">— Сергей Новиков, Минский район</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Планируете перепланировку или строительство в Минске?</h2>
+            <p class="lead mb-4">Получите бесплатную консультацию и расчет стоимости работ. Поможем с согласованием перепланировки</p>
+            <button class="btn btn-primary btn-lg" onclick="openOrderModal()"><i class="bi bi-envelope"></i> Получить консультацию</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="bi bi-hammer"></i> Stroiuslugi.by</h5>
+                    <p>Профессиональные строительные и отделочные работы.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Контакты</h5>
+                    <p><i class="bi bi-telephone"></i> <a href="tel:+375297303993">+375297303993</a></p>
+                    <p><i class="bi bi-envelope"></i> <a href="mailto:info@stroiuslugi.by">info@stroiuslugi.by</a></p>
+                    <p><i class="bi bi-geo-alt"></i> Минская область, г. Несвиж, улица Кутузова, 1</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Юридическая информация</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>УНП:</strong> 693167941</li>
+                        <li class="mb-2"><strong>Адрес:</strong> Минская область, г. Несвиж, улица Кутузова, 1</li>
+                        <li class="mb-2"><strong>Лицензия:</strong> №0196424, выдана Несвижским районным исполнительным комитетом</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Stroiuslugi.by. Все права защищены.</p></div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Оставить заявку</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="clientName" class="form-label">Ваше имя *</label>
+                            <input type="text" class="form-control" id="clientName" name="name" required>
+                            <div class="invalid-feedback">Пожалуйста, введите ваше имя.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientPhone" class="form-label">Телефон *</label>
+                            <input type="tel" class="form-control" id="clientPhone" name="phone" required pattern="[0-9+\s()-]+">
+                            <div class="invalid-feedback">Пожалуйста, введите корректный номер телефона.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientMessage" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="clientMessage" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- Services Gallery JS - Lightbox для галереи услуг -->
+    <script src="../js/services-gallery.js"></script>
+    <!-- Скрипт отправки заявок в Telegram-бот: обрабатывает форму из модального окна -->
+    <script src="../js/send-form.js"></script>
+</body>
+</html>
+
+
