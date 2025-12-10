@@ -13,7 +13,7 @@
 
     // Конфигурация Telegram-бота
     const TELEGRAM_BOT_TOKEN = '8285852782:AAH46yRNKZKG7PfNWD3w7AaetIrmj8gm2pc';
-    const TELEGRAM_CHAT_ID = '2043581943';
+    const TELEGRAM_CHAT_ID = '706441107';
     const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
     /**
@@ -197,4 +197,5 @@
         initFormHandlers();
     }
 })();
+
 
